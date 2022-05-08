@@ -18,7 +18,7 @@ def Comment(stockComentario):
     time.sleep(1)
     pg.moveTo(450,550) #move to comment area
     time.sleep(3)
-    pg.typewrite(stockComentario) # write comment
+    pg.typewrite(stockComentario) #write comment
     time.sleep(3)
     pg.press("left",presses=1)
    # pg.press("enter")

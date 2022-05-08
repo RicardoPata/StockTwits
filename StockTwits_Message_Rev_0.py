@@ -9,7 +9,7 @@ def Message(stock):
     time.sleep(5)
     pg.click(462,387) #click to comment area
     time.sleep(5)
-    pg.typewrite(stock)  # write comment
+    pg.typewrite(stock)  #write comment
     time.sleep(5)
     pg.press("down",presses=2)
     time.sleep(5)

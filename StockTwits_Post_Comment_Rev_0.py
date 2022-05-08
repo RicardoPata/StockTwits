@@ -26,7 +26,7 @@ change pg.click to pg.moveTo and check if coordinantes matche.
 If coordinates dont match, on console move your mouse to the position where the button is and write on console pg.position() ,
 this will give you the coordinates
 
---
+-
 1 - update on github
 """
 
