@@ -4,9 +4,9 @@ Created on Mon May  8 23:45:53 2022
 
 @author: Richie Paw
 
-Bot to spam on stocktwits , using library pyautogui to simulate mouse and keyboard moves
+Use this Bot to spam other boards on stocktwits , using library pyautogui to simulate mouse and keyboard moves
 
-Line 20, Stock symbols its a text file with all stocks you want to spam
+Line 20, Stock symbols its a text file with bio stocks 
 
 Def Post - will get each stock on stocksymbols and will write on stocktwits  1st stock message A, 2nd stock message B, 3rd stock Message A.
 
