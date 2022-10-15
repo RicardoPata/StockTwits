@@ -32,7 +32,7 @@ this will give you the coordinates
 
 #libraries used
 
-from StockTwits_Message_Rev_0_Rev_0 import Message
+from StockTwits_Message_Rev_0 import Message
 from StockTwits_Comment_Rev_0 import Comment
 import pyautogui as pg
 import time
@@ -52,6 +52,33 @@ file.close()
 
 time.sleep(5)
 
+messageA = '''Hi guys, sorry to come in your board spamming. Please don't report, if i'm bothering you, just comment "stop", and i will not come to this board again.
+
+I'm software developer that enjoys trading. Recently i created a algorithm to look for trade opportunities which also alerts to my discord.
+
+I've been backtesting this for the past 2 weeks and looks ok so far. 
+
+Im opening my discord for free to anyone that wants to join and receives the alerts. Use it at your own risk, do not trade on the first day, see for yourself how it works and if it suits your risk management.
+
+The alerts consists on day trading penny stocks / stock options -> 2-6 alerts per day.
+
+https://discord.gg/cvJhUBMM
+'''
+
+
+messageB = '''Hello, guys sorry to come to your board spamming. Please don't report, if i'm bothering you, just write "stop", and i will not come to this board again.
+
+I'm software developer that enjoys trading.
+Recently i created a algorithm to look for trade opportunities which also alerts to my discord.
+
+Im opening my discord for free to anyone that wants to join and receives the alerts. Use it at your own risk, do not trade on the first day, see for yourself how it works and if it suits your risk management. 
+I've been backtesting this for the past 2 weeks and looks ok so far. 
+
+The alerts consists on stock options / day trading penny stocks -> 2-6 alerts per day.
+
+https://discord.gg/cvJhUBMM
+'''
+
 def Post():    # write posts on stocktwits 
     
     DifferentMessage = False
@@ -60,14 +87,14 @@ def Post():    # write posts on stocktwits
         today = datetime.now()
     
         if DifferentMessage == False:
-            stockMessage = str('\n {} MESSAGE A \n \n {}').format(each_stock,today)
+            stockMessage = str('\n {} \n \n{} \n \n {}').format(each_stock,messageA,today)
             #print(stockMessage)
             Message(stockMessage)
             time.sleep(5)
             DifferentMessage = True
         
         else:
-            stockMessage = str('\n {} MESSAGE B \n \n {}').format(each_stock,today)
+            stockMessage = str('\n {} \n \n {} \n \n {}').format(each_stock,messageB,today)
             #print(stockMessage)
             Message(stockMessage)
             time.sleep(5)
@@ -87,11 +114,11 @@ def Comentarios():
 
 Post()  
       
-pg.click(x=1184, y=95) # go to your profile
-time.sleep(2)
-pg.click(x=1135, y=146)
+# pg.click(x=1184, y=95) # go to your profile
+# time.sleep(2)
+# pg.click(x=1135, y=146)
 
-Comentarios()
+# #Comentarios()
 
 # pg.click(x=14, y=743) # power off your computer
 # time.sleep(2)
